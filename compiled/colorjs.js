@@ -49,7 +49,7 @@ class ColorHelper {
 		channels.push(ColorHelper.calculateChannelTransit(rgbFrom[0], rgbTo[0], transit));
 		channels.push(ColorHelper.calculateChannelTransit(rgbFrom[1], rgbTo[1], transit));
 		channels.push(ColorHelper.calculateChannelTransit(rgbFrom[2], rgbTo[2], transit));
-		return chanels;
+		return channels;
 	}
 	static calculateColorTransitRgba(hexFrom, hexTo, percent) {
 		const rgbaFrom = ColorHelper.hex2rgba(hexFrom);
