@@ -46,19 +46,19 @@ class ColorHelper {
 		const rgbFrom = ColorHelper.hex2rgb(hexFrom);
 		const rgbTo = ColorHelper.hex2rgb(hexTo);
 		const channels = [];
-		channels.push(ColorHelper.calculateChannel(rgbFrom[0], rgbTo[0], transit));
-		channels.push(ColorHelper.calculateChannel(rgbFrom[1], rgbTo[1], transit));
-		channels.push(ColorHelper.calculateChannel(rgbFrom[2], rgbTo[2], transit));
+		channels.push(ColorHelper.calculateChannelTransit(rgbFrom[0], rgbTo[0], transit));
+		channels.push(ColorHelper.calculateChannelTransit(rgbFrom[1], rgbTo[1], transit));
+		channels.push(ColorHelper.calculateChannelTransit(rgbFrom[2], rgbTo[2], transit));
 		return chanels;
 	}
 	static calculateColorTransitRgba(hexFrom, hexTo, percent) {
 		const rgbaFrom = ColorHelper.hex2rgba(hexFrom);
 		const rgbaTo = ColorHelper.hex2rgba(hexTo);
 		const channels = [];
-		channels.push(ColorHelper.calculateChannel(rgbaFrom[0], rgbaTo[0], transit));
-		channels.push(ColorHelper.calculateChannel(rgbaFrom[1], rgbaTo[1], transit));
-		channels.push(ColorHelper.calculateChannel(rgbaFrom[2], rgbaTo[2], transit));
-		channels.push(ColorHelper.calculateChannel(rgbaFrom[3], rgbaTo[3], transit));
+		channels.push(ColorHelper.calculateChannelTransit(rgbaFrom[0], rgbaTo[0], transit));
+		channels.push(ColorHelper.calculateChannelTransit(rgbaFrom[1], rgbaTo[1], transit));
+		channels.push(ColorHelper.calculateChannelTransit(rgbaFrom[2], rgbaTo[2], transit));
+		channels.push(ColorHelper.calculateChannelTransit(rgbaFrom[3], rgbaTo[3], transit));
 		return channels;
 	}
 	static calculateRgbTransitHex(hexFrom, hexTo, transit) {
