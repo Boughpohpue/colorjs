@@ -36,14 +36,14 @@ class Color {
 
   static #parseInput(args) {
     const isHex = v => typeof v === "string" && ColorHelper.isHexColor(v);
-    const isName = v => typeof v === "string" && !isHex(v);
+    const isName = v => typeof v === "string" && !ColorHelper.isHexColor(v);
     const isChannels = v => Array.isArray(v) && (v.length === 3 || v.length === 4);
 
     let name;
     let r, g, b, a;
     for (const arg of args) {
       if (isName(arg)) name = arg;
-      else if (isHex(arg)) {
+      else if (ColorHelper.isHexColor(arg)) {
         const ch = ColorHelper.hex2rgba(arg);
         [r,g,b] = ch;
         a = ch[3] * 255;

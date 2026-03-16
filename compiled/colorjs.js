@@ -34,7 +34,7 @@ class ColorHelper {
 		return ColorHelper.hex2rgba(hex).slice(0, 3);
 	}
 	static hex2rgba(hex) {
-    if (!ColorHelper.isHex(hex)) throw new Error("Provided parameter has invalid format!");
+    if (!ColorHelper.isHexColor(hex)) throw new Error("Provided parameter has invalid format!");
 		hex = ColorHelper.normalizeHex(hex).substring(1);
 		let channels = [];
 		for (var x = 0; x <= hex.length - 1; x += 2)
